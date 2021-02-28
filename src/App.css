@@ -1,0 +1,24 @@
+.app-wrapper {
+  width: 95%;
+  height: 100%;
+  margin: 20px 0 0 20px;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-template-areas:
+  "h h"
+  "c m"
+  "с m";
+}
+.header{
+  grid-area: h;
+}
+.app-autocomplete{
+  grid-area: c;
+}
+.app-map{
+  grid-area: m;
+}
+.content{
+  padding-top: 20px;
+}

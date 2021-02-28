@@ -1,0 +1,25 @@
+.contentWrapper {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 40% 10fr;
+    grid-gap: 30px;
+    grid-template-areas:
+  "h m"
+  "z k";
+}
+.input{
+    grid-area: h;
+}
+.complete{
+    grid-area: z;
+}
+.uncomplete{
+    grid-area: k;
+}
+.batchDelete{
+    padding-top: 10px;
+    grid-area: m;
+}

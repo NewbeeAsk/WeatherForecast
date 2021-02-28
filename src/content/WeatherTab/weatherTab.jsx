@@ -1,10 +1,6 @@
-import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import {CardMedia} from "@material-ui/core";
+import makeStyles from "@material-ui/core/styles/makeStyles";
+import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@material-ui/core";
+
 
 const useStyles = makeStyles({
     root: {
@@ -55,13 +51,13 @@ const WeatherTab = (props) => {
                         {props.data.name}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        <div>Облачность {props.data.clouds.all}%</div>
-                        <div>Температура:</div>
-                        <div>максимальная {FahrenheitToCelsius(props.data.main.temp_max)}</div>
-                        <div>минимальная {FahrenheitToCelsius(props.data.main.temp_min)}</div>
-                        <div>чувствуються {FahrenheitToCelsius(props.data.main.feels_like)}</div>
-                        <div>Давление {Math.round(props.data.main.pressure * 0.750061683)} мм.рт.ст.</div>
-                        <div>Влажность {props.data.main.humidity}%</div>
+                        Облачность {props.data.clouds.all}%<br />
+                        Температура:<br />
+                        максимальная {FahrenheitToCelsius(props.data.main.temp_max)}<br />
+                        минимальная {FahrenheitToCelsius(props.data.main.temp_min)}<br />
+                        чувствуються {FahrenheitToCelsius(props.data.main.feels_like)}<br />
+                        Давление {Math.round(props.data.main.pressure * 0.750061683)} мм.рт.ст.<br />
+                        Влажность {props.data.main.humidity}%
                     </Typography>
                 </CardContent>
             </CardActionArea>
